@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\# Aulas de Programação\\C#\\Trabalhando com Arquivos\\File, FileInfo e IOException\\File\\FileFileInfo.csproj": {}
+    "D:\\# Aulas de Programação\\C#\\Trabalhando com Arquivos\\File, FileInfo e IOException\\FileFileInfoIOException\\FileFileInfo.csproj": {}
   },
   "projects": {
-    "D:\\# Aulas de Programação\\C#\\Trabalhando com Arquivos\\File, FileInfo e IOException\\File\\FileFileInfo.csproj": {
+    "D:\\# Aulas de Programação\\C#\\Trabalhando com Arquivos\\File, FileInfo e IOException\\FileFileInfoIOException\\FileFileInfo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\# Aulas de Programação\\C#\\Trabalhando com Arquivos\\File, FileInfo e IOException\\File\\FileFileInfo.csproj",
+        "projectUniqueName": "D:\\# Aulas de Programação\\C#\\Trabalhando com Arquivos\\File, FileInfo e IOException\\FileFileInfoIOException\\FileFileInfo.csproj",
         "projectName": "FileFileInfo",
-        "projectPath": "D:\\# Aulas de Programação\\C#\\Trabalhando com Arquivos\\File, FileInfo e IOException\\File\\FileFileInfo.csproj",
+        "projectPath": "D:\\# Aulas de Programação\\C#\\Trabalhando com Arquivos\\File, FileInfo e IOException\\FileFileInfoIOException\\FileFileInfo.csproj",
         "packagesPath": "C:\\Users\\Administrador\\.nuget\\packages\\",
-        "outputPath": "D:\\# Aulas de Programação\\C#\\Trabalhando com Arquivos\\File, FileInfo e IOException\\File\\obj\\",
+        "outputPath": "D:\\# Aulas de Programação\\C#\\Trabalhando com Arquivos\\File, FileInfo e IOException\\FileFileInfoIOException\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrador\\AppData\\Roaming\\NuGet\\NuGet.Config",
