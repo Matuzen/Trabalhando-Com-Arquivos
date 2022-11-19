@@ -7,31 +7,29 @@ namespace FileFileInfo
     {
         static void Main(string[] args)
         {
-            string path = @"D:\file1.txt";    // caminho de origem
-           
-            StreamReader sr = null;
             try
             {
+                string path = @"D:\file1.txt";    // caminho de origem
 
-                sr = File.OpenText(path);
-                while (!sr.EndOfStream)
+                using (FileStream fs = new FileStream(path, FileMode.Open))    // bloco using (instancia do FileStream(caminho, modo de abertura do arquivo))
                 {
-                    string line = sr.ReadLine();
-                    Console.WriteLine(line);
+                    using (StreamReader sr = new StreamReader(fs))          // Cascatear mais de um bloco using, tudo aqui vai ser executado, quando esse bloco terminar esse recurso vai ser fechado (StreamReader)
+                    {
+                        while (!sr.EndOfStream) // Ler o arquivo do inicio ao fim
+                        {
+                            string line = sr.ReadLine();     // Lendo uma linha de cada vez
+                            Console.WriteLine(line);
+                        }
+                    }
                 }
-
             }
+
             catch (IOException e)
             {
                 Console.WriteLine("An error ocurred");
                 Console.WriteLine(e.Message);
             }
 
-            finally
-            {
-                if (sr != null) sr.Close();
-              
-            }
         }
     }
 }
