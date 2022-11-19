@@ -12,22 +12,14 @@ namespace FileFileInfo
 
             try
             {
-                var folders = Directory.EnumerateDirectories(path, "*.*", SearchOption.AllDirectories);
-                Console.WriteLine("FOLDERS:");
-                foreach (string s in folders)
-                {
-                    Console.WriteLine(s);
-                }
-
-                var files = Directory.EnumerateFiles(path, "*.*", SearchOption.AllDirectories);
-                Console.WriteLine("FILES:");
-                foreach (string s in files)
-                {
-                    Console.WriteLine(s);
-                }
-
-                Directory.CreateDirectory(path + @"\newfolder");     // criar nova pasta
-
+                Console.WriteLine("DirectorySeparatorChar" + Path.DirectorySeparatorChar);
+                Console.WriteLine("PathSeparator" + Path.PathSeparator);
+                Console.WriteLine("GetDirectoryName" + Path.GetDirectoryName(path));
+                Console.WriteLine("GetFileName" + Path.GetFileName(path));
+                Console.WriteLine("GetFileNameWithoutExtension" + Path.GetFileNameWithoutExtension(path));
+                Console.WriteLine("GetExtension" + Path.GetExtension(path));
+                Console.WriteLine("GetFullPath" + Path.GetFullPath(path));
+                Console.WriteLine("GetTempPath" + Path.GetTempPath());
             }
 
             catch (IOException e)
