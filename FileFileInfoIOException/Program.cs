@@ -7,19 +7,20 @@ namespace FileFileInfo
     {
         static void Main(string[] args)
         {
+
+            // Fazer a instanciação do StreamReader de forma resumida
+            // Ao invés de colocar 2 blocos using, vamos usar apenas 1 bloco using com a instanciação com classe File
+           
+            string path = @"D:\file1.txt";    // caminho de origem
+
             try
             {
-                string path = @"D:\file1.txt";    // caminho de origem
-
-                using (FileStream fs = new FileStream(path, FileMode.Open))    // bloco using (instancia do FileStream(caminho, modo de abertura do arquivo))
+                using (StreamReader sr = File.OpenText(path))         
                 {
-                    using (StreamReader sr = new StreamReader(fs))          // Cascatear mais de um bloco using, tudo aqui vai ser executado, quando esse bloco terminar esse recurso vai ser fechado (StreamReader)
+                    while (!sr.EndOfStream) // Ler o arquivo do inicio ao fim
                     {
-                        while (!sr.EndOfStream) // Ler o arquivo do inicio ao fim
-                        {
-                            string line = sr.ReadLine();     // Lendo uma linha de cada vez
-                            Console.WriteLine(line);
-                        }
+                        string line = sr.ReadLine();     // Lendo uma linha de cada vez
+                        Console.WriteLine(line);
                     }
                 }
             }
@@ -29,8 +30,6 @@ namespace FileFileInfo
                 Console.WriteLine("An error ocurred");
                 Console.WriteLine(e.Message);
             }
-
         }
     }
 }
- 
