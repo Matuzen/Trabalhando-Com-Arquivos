@@ -25,6 +25,9 @@ namespace FileFileInfo
                 {
                     Console.WriteLine(s);
                 }
+
+                Directory.CreateDirectory(path + @"\newfolder");     // criar nova pasta
+
             }
 
             catch (IOException e)
