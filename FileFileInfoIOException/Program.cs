@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace FileFileInfo
@@ -7,23 +8,16 @@ namespace FileFileInfo
     {
         static void Main(string[] args)
         {
-            string sourcePath = @"D:\file1.txt";
-            string targetPath = @"D:\file2.txt";
-            
+            string path = @"D:\# Aulas de Programação\My Folder";
+
             try
             {
-                // Ler todo o conteúdo do file1
-                string[] lines = File.ReadAllLines(sourcePath);
-
-                // Instanciar o StreamWriter para escrever no arquivo de saída
-                using (StreamWriter sw = File.AppendText(targetPath))
-                // AppendText vai abrir o arquivo para escrita e tudo que for mandado a escrever
-                // vai ser mandado no final do arquivo (Append significa concatenação, ou seja vai ser acrescentado ao final)
+                // listar todas as subpastas
+                IEnumerable<string> folders = Directory.EnumerateDirectories(path, "*.*", SearchOption.AllDirectories);
+                Console.WriteLine("FOLDERS:");
+                foreach (string s in folders)
                 {
-                    foreach (string line in lines)
-                    {
-                        sw.WriteLine(line.ToUpper()); // escrever essa string line no arquivo sw convertido em letra maiúscula
-                    }
+                    Console.WriteLine(s);
                 }
             }
 
