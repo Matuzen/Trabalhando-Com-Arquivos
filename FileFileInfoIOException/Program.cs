@@ -12,10 +12,16 @@ namespace FileFileInfo
 
             try
             {
-                // listar todas as subpastas
-                IEnumerable<string> folders = Directory.EnumerateDirectories(path, "*.*", SearchOption.AllDirectories);
+                var folders = Directory.EnumerateDirectories(path, "*.*", SearchOption.AllDirectories);
                 Console.WriteLine("FOLDERS:");
                 foreach (string s in folders)
+                {
+                    Console.WriteLine(s);
+                }
+
+                var files = Directory.EnumerateFiles(path, "*.*", SearchOption.AllDirectories);
+                Console.WriteLine("FILES:");
+                foreach (string s in files)
                 {
                     Console.WriteLine(s);
                 }
